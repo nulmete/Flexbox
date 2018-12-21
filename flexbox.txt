@@ -34,6 +34,23 @@ npm install
 
 We use this instead of SASS variables.
 Advantages:
+
 1) Can be manipulated with JS.
 2) Can be modified with the dev tools.
 3) They cascade and are inherited.
+
+// =============================================================================
+// HEADER
+// =============================================================================
+
+We use SVGs instead of icons (BEST PRACTICE)
+SVG = Scalable Vector Graphics.
+App: icomoon.io > App > Add icons from library > Entypo
+
+3 main components:
+
+1) Logo
+2) Search bar
+3) User navigation
+
+To format SVG: height and width
