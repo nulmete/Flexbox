@@ -1,0 +1,39 @@
+// =============================================================================
+// CONTAINER
+// =============================================================================
+
+flex-direction: row | row-reverse | column | column-reverse
+flex-wrap: nowrap | wrap | wrap-reverse
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+align-items: stretch | flex-start | flex-end | center | baseline
+align-content: stretch | flex-start | flex-end | center | space-between | space-around
+
+// =============================================================================
+// ITEM
+// =============================================================================
+
+align-self: auto | stretch | flex-start | flex-end | center | baseline
+order: 0 | <integer>
+
+flex-grow: 0 | <integer>
+flex-shrink: 1 | <integer>
+flex-basis: auto | <length>
+
+flex: 0 1 auto | <int> <int> <len>
+
+// =============================================================================
+// NPM
+// =============================================================================
+
+Same package.json file.
+npm install
+
+// =============================================================================
+// CSS Variables
+// =============================================================================
+
+We use this instead of SASS variables.
+Advantages:
+1) Can be manipulated with JS.
+2) Can be modified with the dev tools.
+3) They cascade and are inherited.
