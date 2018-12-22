@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
 
-    // Doesn't inherit font-family, font-size and color
+//     // Doesn't inherit font-family, font-size and color
     &__input {
         font-family: inherit; 
         font-size: inherit; // 1.4rem inherited from the header
@@ -50,10 +50,11 @@
         background-color: var(--color-grey-light-3);
     }
 
-    // On top of the input
+//     // On top of the input
     &__button {
         border: none;
         background-color: var(--color-grey-light-2);
+        transition: all .2s;
 
         &:focus {
             outline: none;
@@ -79,6 +80,7 @@
     align-self: stretch; // fill the entire header (which had align-items: center)
 
     display: flex;
+
     // after setting height 100%, this doesn't do anything
     // align-items: center;
 
@@ -134,4 +136,84 @@
 
     // Formatted at & > *
     // &__user-name { }
+}
+
+/* ========================================================================== */
+/* Side navigation */
+/* ========================================================================== */
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    // For the animation on hover
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                    background-color .1s;
+        // transform-origin: bottom;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: var(--color-grey-light-1);
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            padding: 1.5rem 3rem;
+
+            position: relative;
+            z-index: 10;
+
+            display: flex;
+            align-items: center;
+        }
+
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor; // color of the current element or parent element (link)
+    }
+}
+
+/* ========================================================================== */
+/* Legal */
+/* ========================================================================== */
+
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
 }

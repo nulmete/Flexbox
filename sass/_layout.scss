@@ -27,11 +27,17 @@
 
     // Don't grow besides the width that is defined
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
-    background-color: orangered;
-
     // Grow to fill all the available space
     flex: 1;
+
+    // test
+    height: 80rem;
+    background-color: orangered;
 }
