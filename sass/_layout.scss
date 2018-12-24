@@ -10,7 +10,7 @@
     font-size: 1.4rem; // will be inherited by the input
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
 
     // Logo, search box and nav side by side
     display: flex;
@@ -39,5 +39,4 @@
 
     // test
     height: 80rem;
-    background-color: orangered;
 }
