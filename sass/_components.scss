@@ -239,7 +239,7 @@
     display: flex;
     // justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
 
     &__heading {
         font-size: 2.25rem;
@@ -341,5 +341,80 @@
     100% {
         transform: scale(1);
         box-shadow: none;
+    }
+}
+
+/* ========================================================================== */
+/* Paragraph */
+/* ========================================================================== */
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+/* ========================================================================== */
+/* List */
+/* ========================================================================== */
+
+.list {
+    list-style-type: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            margin-right: .7rem;
+
+            // For older browsers - can't change the SVG color
+            // background-image: url(../img/SVG/chevron-thin-right.svg);
+            // background-size: cover;
+
+            // Newer browsers - mask
+            background-color: var(--color-primary);
+            mask-image: url(../img/SVG/chevron-thin-right.svg);
+            mask-size: cover; // the icon is larger than 1rem
+        }
+    }
+}
+
+/* ========================================================================== */
+/* Recommend */
+/* ========================================================================== */
+
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+        margin-right: auto;
+    }
+
+    // &__friends { }
+
+    &__photo {
+        box-sizing: content-box; // add border on top of the width and the height
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
     }
 }
