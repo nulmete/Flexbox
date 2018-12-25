@@ -40,6 +40,7 @@
 }
 
 .detail {
+    font-size: 1.4rem; // better than putting it in the description and the user-reviews
     display: flex;
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
@@ -47,15 +48,20 @@
 }
 
 .description {
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
+    padding: 3rem;
+    margin-right: 4.5rem;
     background-color: #fff;
     box-shadow: var(--shadow-light);
-    padding: 3rem;
     flex: 0 0 60%;
-    margin-right: 4.5rem;
 }
 
 .user-reviews {
-    background-color: greenyellow;
-    flex: 1; // occupy the rest of the space (40%)
+    // font-size: 1.4rem;
+    flex: 1; // occupy rest of space (40%)
+
+    // Center the button
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
