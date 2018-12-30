@@ -17,7 +17,7 @@ Grey dark 3: #999
 */
 
 // Higher specificity than html
-// All variables available to all elements
+// All variables are available to all elements
 :root {
     --color-primary: #eb2f64;
     --color-primary-light: #FF3366;
@@ -38,6 +38,13 @@ Grey dark 3: #999
     --line: 1px solid var(--color-grey-light-2);
 }
 
+// SASS variables for media queries (CSS vars don't work)
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
 *,
 *::before,
 *::after {
@@ -49,6 +56,13 @@ Grey dark 3: #999
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
+
+    // Now the max-width of the div.container is 120 * 8px = 960px
+    // Then, the container doesn't fill the entire viewport (1100px)
+    // max-width: 1100px
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; // 1rem = 8px
+    }
 }
 
 body {
